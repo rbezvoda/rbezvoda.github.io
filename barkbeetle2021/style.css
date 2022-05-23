@@ -1,0 +1,163 @@
+body {
+	background-color: C0C0C0; 
+}
+.menu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+background: #336699;
+
+}
+
+.whole_content{
+	background-color: white;
+	width: 1000;
+	
+	position: relative;
+  left: 10%;
+}
+
+.menu_grey {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+text-align: left;	
+background: #C0C0C0;
+
+}
+
+.nadpis_small {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color:#336699;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 20;
+	
+
+}
+
+.nadpis_small_center {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+	
+.obsah {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 10;
+	
+}
+
+.obsah_line {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 150%;
+}
+
+.obsah_pozadi {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #E2F9CB;
+  text-align: center;
+  
+}
+
+.obsah_pozadi_zeleny {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #336699;
+  color: #336699;
+  text-align: center;
+}
+
+.obsah_zeleny {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #336699;
+	font-weight: bold;
+}
+
+.obsah_zeleny16 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #336699; 
+	font-weight: bold;
+}
+
+
+.obsah_green {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: 
+}
+.obsah_center {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+.pata {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+background: #336699;
+text-align: center; 
+
+}
+
+.copy {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+
+}
+
+a.copy{
+	font-size: 10;	
+	font-weight: bold;
+	text-decoration: underline;
+	color: black;
+	
+}
+
+a.menu{
+	font-size: 12;	
+	font-weight: bold;
+  color: #FFFFFF;
+	text-decoration: none;
+
+	
+}
+
+a.obsah{
+	font-size: 12;	
+	font-weight: bold;
+	text-decoration: underline;
+	color: black;
+	
+}
+
+a.obsah1{
+	font-size: 12;	
+
+	text-decoration: underline;
+	color: black;
+	
+}
+
+a.obsah_zeleny {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #336699; 
+	font-weight: bold;
+}
