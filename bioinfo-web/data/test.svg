@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+<circle cx="400" cy="200" r="150" style="fill:none;stroke:black;stroke-width:0.5"/>
+<text x="400" y="200" style="text-anchor:middle; font-size:12px; font-weight:bold; font-family:Arial;">pTEST</text>
+<text x="400" y="215" style="text-anchor:middle; font-size:10px; font-family:Arial;">3685 bp</text>
+<path d="M 400.255760472023 50.0002180448886 L 400.29838721736 25.0002543857034" style="fill:none;stroke:black;stroke-width:0.5" />
+<text x="400.306912566428" y="20.0002616538664" style="text-anchor:start; font-size:9px; font-family:Arial;">EcoRI 1</text>
+<path d="M 547.703859004264 226.145172312465 L 572.321168838308 230.502701031209" style="fill:none;stroke:black;stroke-width:0.5" />
+<text x="577.244630805117" y="231.374206774958" style="text-anchor:start; font-size:9px; font-family:Arial;">BamHI 1024</text>
+<path d="M 400.245530053142 56.0002093230931 L 400.265990890904 44.0002267666842 A 156,156 0 0,1 554.779020899844 219.479596743401 L 560.732060165223 220.228812002762 L 547.703859004264 226.145172312465 L 536.919903103709 217.231950965316 L 542.872942369087 217.981166224678 A 144,144 0 0,0 400.245530053142 56.0002093230931" style="fill:Red;stroke:black;stroke-width:0.5;"/>
+<text x="502.751872123463" y="113.988066088922" style="text-anchor:end; font-size:10px; font-family:Arial; font-weight:bold;">Amp</text>
+</svg>
