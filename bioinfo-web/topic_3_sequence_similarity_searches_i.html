@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="bioinfo.css" />
+<title>Topic 3 Sequence similarity searches I</title>
+</head>
+<body>
+    
+        <div id="menu">
+            <ul class="menuitems">
+        
+<li class="menuitem">
+ <a href="introduction_schedule.html">Introduction</a>
+</li>
+<li class="menuitem">
+ <a href="topic_1_basic_handling_of_sequence_data.html">Topic 1 Basic handling of sequence data</a>
+</li>
+<li class="menuitem">
+ <a href="topic_2_public_data_resources.html">Topic 2 Public Data resources</a>
+</li>
+<li class="menuitem active">
+ <a href="topic_3_sequence_similarity_searches_i.html">Topic 3 Sequence similarity searches I</a>
+</li>
+<li class="menuitem">
+ <a href="course_resources_installations.html">Course resources</a>
+</li>
+</ul>
+            <h3><font color="#990000">Online tools</font></h3>
+<ul class="menuitems">
+  <li class="menuitem"><a href="http://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a></li>
+  <li class="menuitem"><a href="http://bioinformatics.org" target="_blank">Bioinformatics.org</a></li>
+  <li class="menuitem"><a href="http://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a></li>
+  <li class="menuitem"><a href="http://www.expasy.org/" target="_blank">ExPaSy</a> proteomics server</li>
+</ul>
+</div>
+    <div id="content">
+        <h1> <font color="#993366">Topic 3: Sequence similarity searches I</font></h1>
+        <h3> <font color="#000000">Methods - BLAST, FASTA. Theoretical principles. Scoring 
+            matrices (PAM, BLOSUM).</font> </h3>
+          
+          <h4> 
+            <hr width="100%"></h4>
+          
+          <h2>
+          <font color="#000000">Are there any sequences related to my sequence?</font></h2>
+          
+          <ul>
+          <li>
+          Did anyone find them already? Try Entrez related sequences!</li>
+          
+            <li> Sequence to database comparisons: methods - most frequent BLAST, FASTA 
+              ... (BUT heuristic searching is a bit risky; if you mind this, try SSEARCH)</li>
+          </ul>
+          
+          <hr width="100%">
+          <h3>
+          BLAST</h3>
+          
+          <ul>
+            <li> <a href="http://www.ncbi.nlm.nih.gov/BLAST/tutorial/Altschul-1.html" target="_blank">theory 
+              (incl. the scoring matrices)</a>, <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&amp;PAGE_TYPE=BlastDocs" target="_blank">manuals</a> 
+              at the NCBI site</li>
+          </ul>
+          
+          <hr width="100%">
+          <h3>
+          FASTA</h3>
+          
+          <ul>
+            <li><a href="http://fasta.bioch.virginia.edu/fasta/fasta_list.html" target="_blank">description</a> 
+              of FASTA and related programs (incl. SSEARCH)</li>
+            <li><a href="http://www.ebi.ac.uk/Tools/sss/fasta/help/index-protein.html" target="_blank">help</a> 
+              incl. sample data at EBI</li>
+          </ul>
+          
+          <hr width="100%">
+          <h2>
+          <a name="tasks"></a>Tasks</h2>
+          
+          <h3> 3.1</h3>
+          <p>Using knowledge from the previouis lesson, find a protein sequence of the human 
+            neurofibromin 1. Choose one of the found Refseq sequences and examine the HomoloGene 
+            link (found among "Related information"). </p>
+          <hr>
+          <h3>3.2</h3>
+          The sequence below corresponds to an evolutionarily conserved yeast gene
+          whose plant homologues you are seeking:
+          <p><font face="Courier New, Courier, mono">&gt;Scsec19 <br>
+            GGGATTGTAGATGTAGTTTCAACACGTCGGCTGATTTATCCCGATTTTGTTAGTAGAAAAGGTTCTACTT <br>
+            CATTCTTGCTTGAGACGTCGTCCCATCAAATTTCTAACATAGTCTTTTTTCAAGGAAGGATATTTTTCAA <br>
+            AGCAGGACTGCAATTAGTCTTTTCCTTTTCTTTACTCCCCTTCCATCATAACTGTTAGTGAATAACCACT <br>
+            TATATAGCATAACACAATGGATCAAGAAACAATAGACACTGACTACGACGTGATTGTCTTAGGTACCGGT <br>
+            ATTACCGAATGTATCTTATCTGGTTTACTCTCTGTAGATGGAAAAAAGGTATTACATATTGACAAGCAAG <br>
+            ACCATTATGGTGGCGAAGCTGCTTCTGTGACCTTATCTCAATTGTATGAAAAATTTAAACAAAATCCGAT <br>
+            CAGTAAAGAGGAACGGGAGTCCAAGTTTGGTAAAGATAGAGATTGGAATGTCGACTTAATTCCTAAATTC <br>
+            CTGATGGCCAATGGTGAGCTGACAAATATTTTAATACATACCGATGTGACCAGATATGTCGATTTCAAGC <br>
+            AAGTTTCTGGCTCCTACGTTTTTAAGCAAGGCAAAATTTACAAAGTGCCAGCTAATGAAATAGAAGCCAT <br>
+            TTCATCGCCATTGATGGGTATTTTTGAAAAACGTAGAATGAAGAAATTTTTAGAATGGATTAGCTCTTAC <br>
+            AAAGAAGATGACTTGTCCACTCATCAAGGATTAGACTTAGACAAGAATACCATGGATGAAGTGTATTATA <br>
+            AATTTGGGTTAGGCAATTCTACCAAAGAATTCATCGGTCATGCAATGGCTTTATGGACCAATGATGACTA <br>
+            CTTACAACAACCTGCTAGGCCATCGTTTGAGAGGATTTTGTTATATTGCCAAAGTGTTGCCCGTTACGGT <br>
+            AAATCACCTTATTTGTATCCTATGTATGGGTTAGGCGAACTTCCACAAGGATTTGCTCGTTTGTCGGCTA <br>
+            TTTACGGTGGTACTTACATGCTAGACACTCCAATTGATGAAGTATTGTATAAAAAAGACACAGGAAAATT <br>
+            TGAAGGGGTCAAGACTAAGCTGGGAACTTTCAAGGCCCCATTGGTTATTGCTGATCCAACTTATTTTCCC <br>
+            GAAAAATGTAAATCTACTGGTCAAAGAGTTATTAGAGCCATCTGTATTCTTAACCATCCAGTTCCGAACA <br>
+            CCAGTAACGCGGATTCTTTACAAATTATTATCCCACAAAGCCAACTGGGAAGGAAAAGCGATATATACGT <br>
+            TGCGATTGTTTCAGATGCGCATAACGTTTGCTCCAAGGGTCACTATTTAGCAATTATTTCTACAATCATT <br>
+            GAAACTGATAAACCACATATAGAATTAGAGCCTGCTTTCAAACTTCTGGGACCAATCGAAGAAAAATTCA <br>
+            TGGGAATTGCCGAATTATTTGAACCAAGAGAAGACGGCTCTAAGGATAACATTTACTTATCCAGATCATA <br>
+            CGACGCATCCTCTCATTTCGAATCCATGACTGACGATGTTAAAGATATTTACTTCAGAGTAACAGGCCAC <br>
+            CCATTAGTTCTAAAACAAAGACAAGAACAAGAAAAGCAGTAAATTCATACCTTTACGACTAAAGCAGCAA <br>
+            TTGGAGGGTAAACTTATTTTTTCC </font>
+          </p><p>Try to locate the closest <b>plant</b> homologue of this sequence by searching 
+            for 
+          </p><ol>
+          <li>
+          closest&nbsp; plant nucleotide relatives by NCBI <b>blastn</b> (database<i>
+          nr</i>, orgn <i>viridiplantae</i>)</li>
+          
+          <li>
+          closest previously annotated plant homologues by NCBI <b>blastx</b> (database<i>
+          nr</i>, orgn <i>viridiplantae</i>)</li>
+          </ol>
+          Compare the results of both searches and evaluate their significance. <b><font color="#3366ff">Provide 
+          the output files and identify a list of significant relatives of the query sequence from both methods. Which 
+          search method is better?</font></b> 
+          <p>
+          </p><hr width="100%">
+          <h3> 3.3</h3>
+          <p>Use the clean sequence from <a href="topic_1_basic_handling_of_sequence_data.html">Task 1.1</a> to find the
+            closest <i>Arabidopsis thaliana</i> ESTs</p>
+          <ul>
+            <li> by NCBI <b>blastn</b></li>
+            <li>by NCBI nucleotide <b>megablast.</b></li>
+          </ul>
+          <p>Keep a multi-FASTA file of the best matches&nbsp;from megablast for future 
+            use. </p>
+          <p>Then try to find best matches from the <em> Arabidopsis thaliana TAIR10 </em>database 
+            at the <a href="https://phytozome-next.jgi.doe.gov/blast-search" target="_blank">Phytozome</a>
+            server. and inspect the results</p>
+          <p>
+          </p><hr width="100%">
+          <h3> 3.4</h3>
+          Take the protein sequence obtained in <a href="topic_1_basic_handling_of_sequence_data.html">Task 1.2</a> and
+          use it to search the non-redundant <i>Arabidopsis</i> database 
+          <ol>
+            <li> by blastp (NCBI or <a href="http://www.plantgdb.org/AtGDB/" target="_blank">AtGDB</a> 
+              use the non-redundant <i>Arabidopsis</i> database or<em> Atpep-TAIR10</em>) 
+              or <a href="https://phytozome-next.jgi.doe.gov/blast-search" target="_blank">Phytozome</a>
+              (use target type Proteome)</li>
+            <li> by tblastn on NCBI.</li>
+            <li> by fasta on <a href="http://www.ebi.ac.uk/Tools/fasta33/" target="_blank">EBI</a> 
+              (searching the Uniprot <span style="font-style: italic;">Viridiplantae</span> 
+              database, as<span style="font-style: italic;"> Arabidopsis </span>option is 
+              not available there).</li>
+            <li>by SSEARCH on EBI (demo only)</li>
+          </ol>
+          <p></p><b><font color="#3333ff">Compare and evaluate the results from at least two methods (i.e. provide the output files).
+          What was your clone?</font></b> </p>
+    </div>
+</body>
+</html>
