@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="bioinfo.css" />
+<title>Topic 4 Sequence similarity searches II</title>
+</head>
+<body>
+    
+        <div id="menu">
+            <ul class="menuitems">
+        
+<li class="menuitem">
+ <a href="introduction_schedule.html">Introduction</a>
+</li>
+<li class="menuitem">
+ <a href="topic_1_basic_handling_of_sequence_data.html">Topic 1 Basic handling of sequence data</a>
+</li>
+<li class="menuitem">
+ <a href="topic_2_public_data_resources.html">Topic 2 Public Data resources</a>
+</li>
+<li class="menuitem">
+ <a href="topic_3_sequence_similarity_searches_i.html">Topic 3 Sequence similarity searches I</a>
+</li>
+<li class="menuitem active">
+ <a href="topic_4_sequence_similarity_searches_ii.html">Topic 4 Sequence similarity searches II</a>
+</li>
+<li class="menuitem">
+ <a href="course_resources_installations.html">Course resources</a>
+</li>
+</ul>
+            <h3><font color="#990000">Online tools</font></h3>
+<ul class="menuitems">
+  <li class="menuitem"><a href="http://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a></li>
+  <li class="menuitem"><a href="http://bioinformatics.org" target="_blank">Bioinformatics.org</a></li>
+  <li class="menuitem"><a href="http://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a></li>
+  <li class="menuitem"><a href="http://www.expasy.org/" target="_blank">ExPaSy</a> proteomics server</li>
+</ul>
+</div>
+    <div id="content">
+        
+<h1> <font color="#993366">Topic 4:</font><font color="#990000"> Sequence similarity 
+    searches II</font></h1>
+    <h3> <font color="#000000">Special features and implementations of BLAST. A closer 
+        look at the pairwise comparison/pairwise alignment problem.</font> </h3>
+      
+      <h4> 
+        <hr width="100%"></h4>
+      
+      <h2>
+      <font color="#000000">There are quite a few things BLAST can do besides
+      simple searching.</font></h2>
+      
+      <h4> <font color="#ff0000">And some things BLAST cannot do ...</font></h4>
+      
+      <ul>
+        <li> <font color="#000000">A proline is a proline in any context, and low complexity 
+          sequences are (usually) useless ... or why (and why not) are we using </font><font color="#cc0000"> 
+          the low complexity filter</font><font color="#000000">.</font></li>
+      
+        <li> <font color="#000000">NCBI BLAST searches a pre-compiled domain database 
+          by default (CD - conserved domain - search).</font></li>
+      
+        <li> <font color="#000000">BLAST algorithm can be used to align 2 sequences 
+          together (AND there are other ways to have a quick look at sequence similarity 
+          ... intro to various meas of making dotplots)</font></li>
+      
+        <li> <font color="#000000">Position-specific iterated BLAST (PSI-BLAST) is a 
+          very sensitive method for detecting diverged sequence motifs (see also <a href="patsearch.html">here</a>).</font></li>
+      
+        <li> <font color="#ff0000">Preset values did not come from the Heaven.</font></li>
+      </ul>
+      
+      <hr width="100%">
+      <h2>
+      <a name="tasks"></a>Tasks</h2>
+      
+      <h3>
+      4.1</h3>
+      Pick one of the longer and visibly repetitive extensin sequences collected in 
+      <a href="topic_2_public_data_resources.html">Task 2.2</a> and use it to perform the following searches 
+      on the non-redundant (nr) protein database at the NCBI BLAST site 
+      <ul>
+        <li>a standard (&quot;old&quot;) BLASTP search with default parameters</li>
+        <li> an accelerated BLASTP (Quick-BLASTP) search</li>
+        <li>an accelerated BLASTP (Quick-BLASTP) search with the Low Complexity Filter 
+          on (accessible in Advanced settings).</li>
+      </ul>
+      <p> Compare the time of computation between &quot;normal&quot; and &quot;quick&quot; 
+        BLASTP and the results of all three methods.. <br>
+      </p>
+      <hr width="100%">
+      <h3>
+      4.2</h3>
+      Pick one of the Arabidopsis RabGDI homologues found in <a href="topic_2_public_data_resources.html">Task 
+      2.3</a>&nbsp; and use it to perform a NCBI blastp search on the non-redundant 
+      (nr) database, keeping all the parameters default. 
+      <ul>
+        <li> Examine the results of the CD search. (You can also perform a separate 
+          CD search from the Blast homepage; it is recommended to use the "full 
+          results" option).</li>
+        <li> Look at the BLAST results - first as they come, then use the formatting 
+          page to select only <i>Arabidopsis thaliana</i>.sequences. Then perform the 
+          search again but restrict the database to <i>Arabidopsis thaliana</i> already 
+          at the search stage. What is the difference between these results?</li>
+        <li>Collect all <b>newly found</b> significantly matching <i>Arabidopsis thaliana</i> 
+          reference sequences(RefSeq) into a multi-FASTA file. Add three to five non-reference 
+          sequences identified in this searchinto the file and try to assign themstandard 
+          locus names(see Task 2.3) using sequence comparison by pairwise BLAST (BLAST2); 
+          this will also allow identifying possible allelic variants or sequencing errors.&nbsp;<b><font color="#009900"> 
+          Provide the list of sequences including all the reference proteins identified 
+          previously, any new&nbsp; reference proteins identified in this task, and 
+          the non-reference sequences assigned to reference loci.Did you find any other 
+          class of proteins than RabGDIs?</font></b></li>
+      </ul>
+      
+      <hr width="100%">
+      <h3>
+      4.3</h3>
+      Compare the following sequences using the BLAST 2 sequences option on NCBI.
+      Examine the effects of
+      <ul>
+        <li> changing the scoring matrix</li>
+      
+        <li> changing the gap penalties using a particular scoring matrix</li>
+      </ul>
+      Note how did the alignment and the E-values change with each modification of the 
+      settings. 
+      <p><b>Sequences:</b>
+      </p><p><font face="Courier New, Courier, mono">&gt;gi_13397640 unknown protein, Brassica 
+        napus <br>
+        MSSAPSPGTGSPPSPPSNSTTTTPPPASAPPPTTPSSPPPPSTIPTSPPPSSRSTPSAPPPSPPTPSTPG <br>
+        SPPPLPQPSPPAPTTPGSPPAPVTPPTRNPPPSVPGPPSNPSREGGSPRPPSSPSPPSPSSDGLSTGVVV <br>
+        GIAIGGVALLVIVTLICLLCKKKRRRDEEDAYYVPPPPPPGPKAGGPYGGQQQQWRQQNATPPSDHVVTS <br>
+        LPPPPKAPSPPRQPPPPPPPPFMSSSGGSDYSDRPVLPPPSPGLVLGFSKSTFTYEELARATNGFSEANL <br>
+        LGQGGFGYVHKGVLPSGKEVAVKQLKVGSGQGEREFQAEVEIISRVHHRHLVSLVGYCIAGAKRLLVYEF <br>
+        VPNNNLELHLHGEGRPTMEWSTRLKIALGSAKGLSYLHEDCNPKIIHRDIKASNILIDFKFEAKVADFGL <br>
+        AKIASDTNTHVSTRVMGTFGYLAPEYAASGKLTEKSDVFSFGVVLLELITGRRPVDANNVYVDDSLVDWA <br>
+        RPLLNRASEQGDFEGLADAKMNNGYDREEMARMVACAAACVRHSARRRPRMSQIVRALEGNVSLSDLNEG <br>
+        MRPGQSNVYSSYGGSTDYDSSQYNEDMKKFRKMALGTQEYNATGEYSNPTSDYGLYPSGSSSEGQTTREM <br>
+        EMGKIKRTGQGYSGPSL <br>
+        &gt;gi_1345852_sp_P41242|MATK_MOUSE Megakaryocyte-associated tyrosine-protein kinase 
+        <br>
+        MARRSSRVSWLAFEGWESRDLPRVSPRLFGAWHPAPAAARMPTRWAPGTQCMTKCENSRPKPGELAFRKG <br>
+        DMVTILEACEDKSWYRAKHHGSGQEGLLAAAALRHGEALSTDPKLSLMPWFHGKISGQEAIQQLQPPEDG <br>
+        LFLVRESARHPGDYVLCVSFGRDVIHYRVLHRDGHLTIDEAVCFCNLMDMVEHYTKDKGAICTKLVKPRR <br>
+        KQGAKSAEEELAKAGWLLDLQHLTLGAQIGEGEFGAVLQGEYLGQKVAVKNIKCDVTAQAFLDETAVMTK <br>
+        LQHRNLVRLLGVILHHGLYIVMEHVSKGNLVNFLRTRGRALVSTSQLLQFALHVAEGMEYLESKKLVHRD <br>
+        LAARNILVSEDLVAKVSDFGLAKAERKGLDSSRLPVKWTAPEALKNGRFSSKSDVWSFGVLLWEVFSYGR <br>
+        APYPKMSLKEVSEAVEKGYRMEPPDGCPGSVHTLMGSCWEAEPARRPPFRKIVEKLGRELRSVGVSAPAG <br>
+        GQEAEGSAPTRSQDP </font><br>
+      </p><hr width="100%">
+      <h3>4.4</h3>
+      <p>Dotplots, such as those seen in the previous lesson, are a good way to get 
+        a quick impression of sequence homology, especially in nucleotide sequences.</p>
+      <p> <a href="data/gepard_input.txt" target="_blank">Here</a> is a DNA sequence 
+        that may contain repeats. Download it to your disk and generate a reverse-complemented 
+        sequence using SMS Reverse Complement. Save the reverse-complemented sequence 
+        in a Fasta file.</p>
+      <p>Use the <a href="https://www.bioinformatics.nl/cgi-bin/emboss/dotmatcher" target="_blank">EMBOSS 
+        Dotmatcher </a>online tool to produce a dotplot (both for the direct and complemetary 
+        strand). Examine the effects of altering window size and threshold values (hint: 
+        first try default vs. threshold = 50).</p>
+      <hr>
+      <h3>4.5</h3>
+      <p>Use PSI_BLAST to identify <font color="#000000">eukaryotic homologs of <i>Staphylococcus 
+        aureus</i> exfoliative toxin A</font><b><font color="#000000">, </font></b>using 
+        the WP_001065781.1<i> sequence </i> as a query. Run at least one, better two 
+        iterations and document the results by the <b><font color="#0066CC">output of 
+        the last iteration done</font></b><font color="#0066CC">.<b>What eukaryotic 
+        protein family is related to the toxin?</b></font><br>
+        &nbsp; </p>
+    </div>
+</body>
+</html>
