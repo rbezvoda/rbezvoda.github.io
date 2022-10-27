@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="bioinfo.css" />
+<title>Topic 7 Playing with DNA</title>
+</head>
+<body>
+
+        <div id="menu">
+            <ul class="menuitems">
+        
+<li class="menuitem">
+ <a href="introduction_schedule.html">Introduction</a>
+</li>
+<li class="menuitem">
+ <a href="topic_1_basic_handling_of_sequence_data.html">Topic 1 Basic handling of sequence data</a>
+</li>
+<li class="menuitem">
+ <a href="topic_2_public_data_resources.html">Topic 2 Public Data resources</a>
+</li>
+<li class="menuitem">
+ <a href="topic_3_sequence_similarity_searches_i.html">Topic 3 Sequence similarity searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_4_sequence_similarity_searches_ii.html">Topic 4 Sequence similarity searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_5_sequence_motif_searches_i.html">Topic 5 Sequence motif searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_6_sequence_motif_searches_ii.html">Topic 6 Sequence motif searches II</a>
+</li>
+<li class="menuitem active">
+ <a href="topic_7_playing_with_dna.html">Topic 7 Playing with DNA</a>
+</li>
+<li class="menuitem">
+ <a href="course_resources_installations.html">Course resources</a>
+</li>
+</ul>
+            <h3><font color="#990000">Online tools</font></h3>
+<ul class="menuitems">
+  <li class="menuitem"><a href="http://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a></li>
+  <li class="menuitem"><a href="http://bioinformatics.org" target="_blank">Bioinformatics.org</a></li>
+  <li class="menuitem"><a href="http://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a></li>
+  <li class="menuitem"><a href="http://www.expasy.org/" target="_blank">ExPaSy</a> proteomics server</li>
+</ul>
+</div>
+<div id="content">
+
+<h1 class="main_heading">Topic 7: Playing with DNA: gene identification, gene 
+building and PCR primer design</h1>
+  
+<h3> <font color="#000000">Algorithmic searching for coding sequences and intron/exon 
+structures in chromosomal DNA. Use of EST alignments for confirmation of the 
+splicing pattern.</font> PCR primer design.</h3>
+  
+  <h4> 
+<hr WIDTH="100%"></h4>
+  
+  <h2>
+  <font color="#000000">How do I find the coding sequences?</font></h2>
+  
+  <ul>
+  <li>
+  <font color="#000000">BLAST is a good tool to identify the chromosome region
+  of interest.</font></li>
+  
+  <li>
+  <font color="#CC0000">Splice site prediction NOT universally solved.</font></li>
+  
+  <li>
+  <font color="#000000">A number of algorithms exist, but there is nothing
+  like a REAL cDNA.</font></li>
+  
+  <li>
+  <font color="#000000">First and last exons are a problem.</font></li>
+  
+  <li>
+  <font color="#000000">EST alignment may help.</font></li>
+  
+<li> <font color="#000000">A good paper on this topic can be found <a href="http://genomebiology.com/2002/3/6/research/0029" target="_blank">here.</a></font></li>
+  </ul>
+  
+  <hr WIDTH="100%">
+  <h3>
+  <font color="#000000">Splicing rules</font></h3>
+  
+  <ul>
+  <li>
+  <font color="#000000"><i>Arabidopsis</i>: most introns have <b>GT-AG</b>
+  boundaries, some are <b>AT-AC </b>(this you will need for the excercises).</font></li>
+  
+  <li>
+  <font color="#000000">Rules are organism-specific.</font></li>
+  
+  <li>
+  <font color="#000000">Programs are usually only trained for the majority
+  intron type.</font></li>
+  </ul>
+  
+  <h3>
+  
+  <hr WIDTH="100%">
+How to do it</h3>
+  
+  <ul>
+<li> <a href="http://hollywood.mit.edu/GENSCAN.html" target="_blank">GENSCAN:</a> 
+  has vertebrate, arabidopsis and maize options, very nice output incl. CDS, 
+  sometimes slow, limited reliability esp. of first and last exons.</li>
+<li> <a href="http://www.cbs.dtu.dk/services/NetGene2/" target="_blank">NetGene2:</a> 
+  arabidopsis, caenorhabditis and vertebrate statistics, a bit difficult output 
+  format, predicts only introns. <a href="http://www.cbs.dtu.dk/services/NetPGene/" target="_blank">Netplantgene</a> 
+  is a version of the same specifically tuned for Arabidopsis.<b>This is the 
+  only method that gives alternative splicing.</b></li>
+<li> <a href="http://linux1.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfind" target="_blank">FGENESH</a></li>
+<li><a href="http://exon.gatech.edu/GeneMark/" target="_blank">GeneMark</a></li>
+<li> Last but not least: <font color="#FF0000">do EST alignment whenever possible</font>. 
+  Combine BLAST and the good old MACAW (take care to reverse-complement the 
+  sequences where necessary - using <a href="https://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a> 
+  for manipulation and testing of the ORFs is a good idea)</li>
+  </ul>
+  
+  <hr WIDTH="100%">
+  <h3>PCR primer design</h3>
+  <p>Recommended sites:</p>
+  <ul>
+<li>NCBI <a href="http://www.ncbi.nlm.nih.gov/tools/primer-blast/index.cgi?" target="_blank">Primer- 
+  BLAST</a> (includes specificity check)</li>
+<li><a href="http://www.bioinformatics.nl/cgi-bin/primer3plus/primer3plus.cgi" target="_blank">Primer 
+  3</a></li>
+<li><a href="http://www.premierbiosoft.com/netprimer/index.html" target="_blank">Netprimer</a> 
+  (registration required, messed-up output on some systems)</li>
+  </ul>
+  <hr>
+  <h2>
+  <a NAME="tasks"></a>Tasks</h2>
+  
+  <h3>
+  7.1.</h3>
+  Below you find a fragment of A. thaliana chromosome sequence. 
+  <p>
+<pre>
+>7_1_genomic
+ATTACCATAATTTAATTTGAACTTAATTTTCTCTAGGAATGGTGATGATCCACTACCACTATCATTGATT
+TCATTCCATATTCCTTTGACCGACTGAAATTACGTTGGAAATAGTATATTTTGATGAATAATTTATTTAC
+TCGGAAAAAAGAGGTCAAGTTATTAATAGTAAGTACATATACATTATCAATTAAGAATTCAATTGAGTTT
+TAAGGAAAATCCTATTAATTTGTTTGGTATTCGGTATTTGTTAGTTCTAAGGAATTGAATTTCCCGATTA
+TACATCATTATAACGTTCTCAAGTTCCAAACTTGCAACCCACATTTTGTCGATATTCTCAAATGTGAATT
+CATTCAATTTCCCATAGAAAACATAAATTTGCACTTAAAGTTAACAATTGAAATCGTATCTAAATGGGAA
+TGTTTTTGGCTTTTAGTGTTAGACTTCCAAAGCGTCAAAAATATTTCTAGAAAGAGCACAAAAAATAAGC
+AACGCCACTACTTTTGGACAAAGTCAACGATAACACACATCAACCGCACCAGCTCCATAAAAGTCCATCT
+CACGAAAACGATTCTAGTCAAACTACCTAAAACACCCTTATATTTACATACAACCCAATCCCACTAACAA
+GGGTATTTTCGTCAATCACAAAATTTATCACCGACCCGGGAAGAAGAAGAAGAACAGATCAACTAATTTC
+TGCTTTCAACTCCACATTAAACCAAAACCTCCAAAAAGAATCATTTATTTAAATTATCTTCCCGTTTTAA
+GTTCCTGAGATTTTTGGGAATTGTAAATTTGAAGAAAATTAAACAAAGACGTGTTTTCATTTTTTTTTTT
+GTTTCCTTTATTGATCTCTCTCTATCTCTCTAAATGAGCTAAATCGTTAATGGCTGCCATGTTTAATCAT
+CCATGGCCTAATTTAACCCTAATTTACTTCTTCTTCATCGTCGTTTTACCATTCCAATCACTTTCTCAAT
+TTGATTCTCCTCAAAATATCGAAACTTTCTTCCCCATCTCTTCACTCTCCCCTGTTCCACCACCGCTTCT
+TCCACCTTCGTCAAACCCATCTCCGCCGTCGAATAATTCATCATCTTCGGATAAAAAAACAATCACCAAA
+GCTGTCCTTATAACAGCAGCAAGTACTTTACTTGTAGCTGGAGTTTTCTTCTTCTGCCTCCAAAGATGTA
+TCATCGCACGGAGACGGAGAGACAGAGTTGGACCAGTCAGAGTCGAAAACACTTTACCTCCGTATCCTCC
+TCCTCCGATGACGTCGGCGGCGGTGACTACGACTACTTTGGCTAGAGAAGGATTCACGAGGTTTGGTGGT
+GTGAAAGGTTTGATTCTTGATGAGAATGGTCTTGATGTGTTGTATTGGAGAAAGCTACAGAGTCAGAGAG
+AAAGAAGTGGGAGTTTCAGGAAACAGATCGTCACCGGAGAAGAAGAAGACGAGAAAGAAGTTATTTATTA
+CAAGAACAAGAAGAAAACAGAGCCCGTTACAGAGATTCCTCTTCTTAGAGGAAGATCATCTACTTCTCAC
+AGTGTTATCCATAACGAAGATCATCAGCCGCCACCGCAGGTGAAACAGAGTGAACCAACACCACCACCGC
+CACCACCGTCAATTGCGGTGAAACAGAGTGCACCAACGCCATCGCCACCTCCTCCGATTAAGAAGGGTTC
+TTCACCATCGCCACCGCCACCTCCACCGGTGAAAAAGGTTGGAGCTTTATCATCATCAGCTTCGAAACCA
+CCACCTGCGCCGGTTAGAGGAGCAAGTGGAGGAGAGACTTCGAAACAAGTAAAGTTGAAGCCTTTACATT
+GGGATAAAGTAAACCCTGATTCCGATCATTCAATGGTTTGGGACAAAATCGATCGTGGATCATTCAGGTA
+TATATTTATTTCGAAAGTTAGGGCTTTTGCTTCAATCAATTGAAAAAACCCTAATTTGTTTTTGTTTCTT
+CTCAGTTTCGATGGCGATTTAATGGAAGCTCTGTTTGGATACGTTGCCGTGGGGAAGAAATCACCAGAAC
+AAGGCGATGAGAAAAACCCTAAATCAACGCAAATATTCATACTTGATCCGAGAAAGTCTCAAAACACAGC
+GATTGTGCTCAAATCATTAGGTATGACACGTGAAGAGCTTGTTGAATCACTCATAGAAGGAAACGATTTC
+GTGCCAGACACTCTTGAGAGGTTAGCTAGAATAGCTCCAACGAAAGAAGAACAATCAGCCATTCTTGAAT
+TCGACGGTGACACGGCAAAGCTTGCTGATGCGGAGACGTTTCTGTTTCATCTTCTTAAATCCGTGCCAAC
+CGCGTTTACGAGACTAAACGCGTTTCTCTTTAGGGCTAATTATTATCCAGAGATGGCTCATCATAGCAAA
+TGTTTACAAACGTTGGATTTAGCTTGTAAAGAGCTGAGATCTCGTGGCTTGTTTGTGAAGCTTTTGGAGG
+CAATACTTAAAGCTGGAAACAGAATGAACGCGGGTACCGCGAGAGGAAACGCTCAAGCGTTTAATCTAAC
+CGCGCTTTTGAAGCTTTCGGATGTTAAAAGCGTTGATGGGAAGACTTCTTTGCTTAACTTTGTAGTGGAG
+GAAGTTGTTAGATCGGAAGGAAAACGTTGTGTTATGAATAGAAGAAGCCATAGCTTAACACGAAGCGGTA
+GTAGTAACTACAATGGTGGTAATAGTAGTCTTCAGGTTATGTCGAAAGAAGAGCAAGAGAAAGAGTACTT
+GAAGCTTGGTTTACCAGTTGTTGGTGGATTGAGCTCTGAGTTTTCAAACGTGAAGAAAGCTGCTTGTGTG
+GACTATGAAACGGTTGTTGCAACTTGTTCTGCTCTTGCGGTTAGAGCGAAAGATGCGAAAACGGTGATTG
+GAGAATGTGAAGATGGAGAAGGAGGGAGGTTTGTGAAAACGATGATGACGTTTCTTGATTCGGTAGAGGA
+AGAGGTGAAAATAGCGAAAGGTGAAGAGAGGAAAGTGATGGAGCTTGTGAAACGTACAACGGATTATTAT
+CAAGCAGGAGCTGTTACAAAGGGGAAGAATCCACTTCATTTGTTTGTTATCGTTAGAGATTTTCTTGCCA
+TGGTTGATAAAGTTTGCTTAGATATTATGAGAAATATGCAGAGGAGGAAGGTTGGTAGTCCGATATCGCC
+TTCTTCGCAGCGGAATGCGGTGAAATTCCCGGTTTTGCCTCCGAATTTCATGTCGGACAGAGCTTGGAGT
+GATTCTGGTGGGTCGGATTCTGATATGTGAGAGTCAAGATTTGTTATATGTAAATACTAAATAGTAGAAG
+CATTTTGGGTATTGATTAGCATTGAAAGATGTTGAATTGTTTATAGATTTATCAGTCCAAAGCATTGGAC
+TTGAGTATAATTTGTTCCTTGTATAAATAAACAATTTTGCTTTAAGACCTTTCCATGTTTATGAACATGT
+CTTCTTTAACTTCACATAGACCTTTTGTTTACGTAAGAACTAATAATACTAAATTGTTTGATAATTCTAA
+ATGTGAAAGTGAACCACTATATAGTGTGAACTTGGCTTTATTGAATTCTTTTTAAAAAAATTTCTCCAGA
+GCTTTAGATGTAGGAGTTAATATTTTCACCTAACATAGCCTCTTTTTTATGTTTCTCTATCAACTAACAC
+TAAATTTGTGGATGAAGACTAAATTAACATAAGTTTATCTATTAACTAACAACCTACCAGTTTGATGCTT
+GTAAATATGAAACTTCAACGTTATAAAGACTATATGGTGTGAACTTTTTATCCATCTTTATTGACTTTTA
+AAATTTTCTTAATTTGAGTAAACAAAAGCAGAAGCTTTTTAAAGGATGCAGGAGTTGATTTTTGTATATG
+AACAAAACATATACTTCTCCCTTAGACGAATTTGGAGCTATCATTCTTGGTTTCAAACTTTTTAATAATT
+TGAGCTTTAAAGCAAAATGGCAACTTTATATTGATCACTAGTCCACAACACTTTCTCTGCCTTTTCCTCA
+ATAGCAACGCGTAGTCAAGAAGAAGAACGTGTTTAACATGGACCAATCTTGATTAAGATAATAGTATGAT
+CAAATGCTTATATAAACACACTAAAAAGGAATCAAATTTAA
+</pre>
+  <p></p>
+  <p>Use GenScan to identify open reading frames within this sequence and
+  keep the predicted CDS <font color="#CC0000">(DNA!)</font>&nbsp; as a FASTA
+  file.
+  <hr WIDTH="100%">
+  <h3>
+  7.2.</h3>
+  Use at least one (but preferentially more) of the other prediction servers demonstrated 
+  to obtain an independent splicing prediction for the same sequence. Keep the prediction 
+  again as a (DNA) FASTA file. 
+  <p><b>HINT:</b> to locate splice sites defined by co-ordinates (such as produced 
+by NetGene2 or GeneBuilder), use SMS GroupDNA to number your sequence. <br>
+  <hr SIZE=0 WIDTH="100%">
+  <h3>
+  7.3.</h3>
+  Align the two predictions to the genomic sequence using Macaw to compare the results. 
+  Then use the experimentally established mRNA sequence below to validate your prediction. 
+  Include the best matching Arabidopsis ESTs from <a href="search1.html">task 3.3.</a>, 
+  which should came from the same gene,&nbsp; into your alignment (you may have 
+  to reverse-complement some of these sequences first). Produce an experimentally 
+  supported ORF prediction and <b><font color="#FFCC00">predicted protein sequence</font></b>. 
+  <p>
+<pre>
+>mRNA gi_23270371 Arabidopsis thaliana At1g70140 mRNA sequence
+AACTCCACATTAAACCAAAACCTCCAAAAAGAATCATTTATTTAAATTATCTTCCCGTTTTAAGTTCCTG
+AGATTTTTGGGAATTGTAAATTTGAAGAAAATTAAACAAAGACGTGTTTTCATTTTTTTTTTTGTTTCCT
+TTATTGATCTCTCTCTATCTCTCTAAATGAGCTAAATCGTTAATGGCTGCCATGTTTAATCATCCATGGC
+CTAATTTAACCCTAATTTACTTCTTCTTCATCGTCGTTTTACCATTCCAATCACTTTCTCAATTTGATTC
+TCCTCAAAATATCGAAACTTTCTTCCCCATCTCTTCACTCTCCCCTGTTCCACCACCGCTTCTTCCACCT
+TCGTCAAACCCATCTCCGCCGTCGAATAATTCATCATCTTCGGATAAAAAAACAATCACCAAAGCTGTCC
+TTATAACAGCAGCAAGTACTTTACTTGTAGCTGGAGTTTTCTTCTTCTGCCTCCAAAGATGTATCATCGC
+ACGGAGACGGAGAGACAGAGTTGGACCAGTCAGAGTCGAAAACACTTTACCTCCGTATCCTCCTCCTCCG
+ATGACGTCGGCGGCGGTGACTACGACTACTTTGGCTAGAGAAGGATTCACGAGGTTTGGTGGTGTGAAAG
+GTTTGATTCTTGATGAGAATGGTCTTGATGTGTTGTATTGGAGAAAGCTACAGAGTCAGAGAGAAAGAAG
+TGGGAGTTTCAGGAAACAGATCGTCACCGGAGAAGAAGAAGACGAGAAAGAAGTTATTTATTACAAGAAC
+AAGAAGAAAACAGAGCCCGTTACAGAGATTCCTCTTCTTAGAGGAAGATCATCTACTTCTCACAGTGTTA
+TCCATAACGAAGATCATCAGCCGCCACCGCAGGTGAAACAGAGTGAACCAACACCACCACCGCCACCACC
+GTCAATTGCGGTGAAACAGAGTGCACCAACGCCATCGCCACCTCCTCCGATTAAGAAGGGTTCTTCACCA
+TCGCCACCGCCACCTCCACCGGTGAAAAAGGTTGGAGCTTTATCATCATCAGCTTCGAAACCACCACCTG
+CGCCGGTTAGAGGAGCAAGTGGAGGAGAGACTTCGAAACAAGTAAAGTTGAAGCCTTTACATTGGGATAA
+AGTAAACCCTGATTCCGATCATTCAATGGTTTGGGACAAAATCGATCGTGGATCATTCAGTTTCGATGGC
+GATTTAATGGAAGCTCTGTTTGGATACGTTGCCGTGGGGAAGAAATCACCAGAACAAGGCGATGAGAAAA
+ACCCTAAATCAACGCAAATATTCATACTTGATCCGAGAAAGTCTCAAAACACAGCGATTGTGCTCAAATC
+ATTAGGTATGACACGTGAAGAGCTTGTTGAATCACTCATAGAAGGAAACGATTTCGTGCCAGACACTCTT
+GAGAGGTTAGCTAGAATAGCTCCAACGAAAGAAGAACAATCAGCCATTCTTGAATTCGACGGTGACACGG
+CAAAGCTTGCTGATGCGGAGACGTTTCTGTTTCATCTTCTTAAATCCGTGCCAACCGCGTTTACGAGACT
+AAACGCGTTTCTCTTTAGGGCTAATTATTATCCAGAGATGGCTCATCATAGCAAATGTTTACAAACGTTG
+GATTTAGCTTGTAAAGAGCTGAGATCTCGTGGCTTGTTTGTGAAGCTTTTGGAGGCAATACTTAAAGCTG
+GAAACAGAATGAACGCGGGTACCGCGAGAGGAAACGCTCAAGCGTTTAATCTAACCGCGCTTTTGAAGCT
+TTCGGATGTTAAAAGCGTTGATGGGAAGACTTCTTTGCTTAACTTTGTAGTGGAGGAAGTTGTTAGATCG
+GAAGGAAAACGTTGTGTTATGAATAGAAGAAGCCATAGCTTAACACGAAGCGGTAGTAGTAACTACAATG
+GTGGTAATAGTAGTCTTCAGGTTATGTCGAAAGAAGAGCAAGAGAAAGAGTACTTGAAGCTTGGTTTACC
+AGTTGTTGGTGGATTGAGCTCTGAGTTTTCAAACGTGAAGAAAGCTGCTTGTGTGGACTATGAAACGGTT
+GTTGCAACTTGTTCTGCTCTTGCGGTTAGAGCGAAAGATGCGAAAACGGTGATTGGAGAATGTGAAGATG
+GAGAAGGAGGGAGGTTTGTGAAAACGATGATGACGTTTCTTGATTCGGTAGAGGAAGAGGTGAAAATAGC
+GAAAAAAAAAAAAAAAA 
+</pre>
+
+  <p>&nbsp;
+  <hr>
+  <h3> 7.4</h3>
+  <p>Design<b> </b>PCR primers for detection of a 400 to 700 bp long diagnostic 
+fragment of the cDNA assembled in Task 7.3<b><font color="#FFCC00"> </font></b>using 
+NCBI Primer-Blast or Primer3. Try to select primers that would distinguish between 
+a product amplified from the cDNA and contaminating genomic DNA in a RT-PCR 
+experiment (hint: the Macaw alignment comes handy for this). Present a graphical 
+map of the locus, showing <b><font color="#FFCC00">positions of the primers 
+and the cDNA exons mapped to the genomic locus</font></b>.</p>
+</div>
+</body>
+</html>

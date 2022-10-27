@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="bioinfo.css" />
+<title>Topic 5 Sequence motif searches I</title>
+</head>
+<body>
+    
+        <div id="menu">
+            <ul class="menuitems">
+        
+<li class="menuitem">
+ <a href="introduction_schedule.html">Introduction</a>
+</li>
+<li class="menuitem">
+ <a href="topic_1_basic_handling_of_sequence_data.html">Topic 1 Basic handling of sequence data</a>
+</li>
+<li class="menuitem">
+ <a href="topic_2_public_data_resources.html">Topic 2 Public Data resources</a>
+</li>
+<li class="menuitem">
+ <a href="topic_3_sequence_similarity_searches_i.html">Topic 3 Sequence similarity searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_4_sequence_similarity_searches_ii.html">Topic 4 Sequence similarity searches II</a>
+</li>
+<li class="menuitem active">
+ <a href="topic_5_sequence_motif_searches_i.html">Topic 5 Sequence motif searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_6_sequence_motif_searches_ii.html">Topic 6 Sequence motif searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_7_playing_with_dna.html">Topic 7 Playing with DNA</a>
+</li>
+<li class="menuitem">
+ <a href="course_resources_installations.html">Course resources</a>
+</li>
+</ul>
+            <h3><font color="#990000">Online tools</font></h3>
+<ul class="menuitems">
+  <li class="menuitem"><a href="http://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a></li>
+  <li class="menuitem"><a href="http://bioinformatics.org" target="_blank">Bioinformatics.org</a></li>
+  <li class="menuitem"><a href="http://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a></li>
+  <li class="menuitem"><a href="http://www.expasy.org/" target="_blank">ExPaSy</a> proteomics server</li>
+</ul>
+</div>
+    <div id="content">
+        <h1 class="main_heading"> Lesson 5: Sequence motif searches and protein domain 
+            structure analysis I</h1>
+            <h3> <font color="#000000">Extraction of sequence characteristics and searching 
+                for known domains - SMART, PROSITE and similar resources.</font> </h3>
+              
+              <h4> 
+                <hr WIDTH="100%"></h4>
+              
+              <h2>
+              <font color="#000000">What can we tell from a sequence (almost) on a first
+              glance?</font></h2>
+              
+              <h3>
+              <font color="#000000">DNA:</font></h3>
+              
+              <ul>
+                <li> <font color="#000000">restriction mapping, ORF searches (see <a href="topic_1_basic_handling_of_sequence_data.html" >here</a>)</font></li>
+                <li> <font color="#000000">pattern searches (see e.g. <a href="https://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a>)</font></li>
+                <ul>
+                  <li> <font color="#000000">finding coding exons, transcription factor binding 
+                    sites etc. - see e.g. <a href="topic_7_playing_with_dna.html">here</a> and 
+                    some tools at <a href="http://www.softberry.com/berry.phtml?topic=index&group=programs&subgroup=gfind" target="_blank">Softberry 
+                    Inc.</a></font></li>
+                </ul>
+              </ul>
+              
+              <h3>
+              <font color="#000000">Protein:</font></h3>
+              
+              <ul>
+                <li> <font color="#000000">size, composition, primary structure characteristics 
+                  (<a href="http://www.expasy.org/" target="_blank">Expasy</a>, SMS Protein 
+                  Stats)</font></li>
+                <li> <font color="#000000">pI (Expasy) .<b>BEWARE!!!</b>.. </font><font color="#FF6600">NOTE: 
+                  it is worth having a closer look at <b>Expasy </b>... we will do it in the 
+                  next lesson as well.</font></li>
+                <li> <font color="#000000">presence of well-known domains</font></li>
+                <ul>
+                  <li> <font color="#000000">NCBI</font><font color="#000000"> - CDD (see <a href="topic_4_sequence_similarity_searches_ii.html" >here</a>)</font></li>
+                  <li> <font color="#000000">PROSITE (available via Expasy)</font></li>
+                  <li><a href="http://pfam.xfam.org/" target="_blank"><font color="#0000FF">Pfam</font></a></li>
+                </ul>
+                <li> <font color="#000000">presence of localisation signals</font>
+                  <ul>
+                    <li><font color="#000000"><a href="https://services.healthtech.dtu.dk/service.php?SignalP-5.0" target="_blank">SignalP</a></font></li>
+                    <li><a href="https://services.healthtech.dtu.dk/service.php?TMHMM-2.0" target="_blank"><font color="#0000CC">TMHMM</font></a></li>
+                  </ul>
+                </li>
+                <li> <b><font color="#000000">all of the above in a single step ... <a href="http://smart.embl-heidelberg.de/" target="_blank">SMART</a>!</font></b></li>
+              </ul>
+              
+              <hr WIDTH="100%">
+              <h2>
+              <a NAME="tasks"></a>Tasks</h2>
+              
+              <h3>
+              5.1.</h3>
+              Compute the molecular mass and pI of a selected extensin from Task 2.2 using SMS 
+              or the Expasy &quot;Compute pI/mw&quot; tool. . 
+              <h3>
+              
+              <hr WIDTH="100%">5.2</h3>
+              Analyse the sequence below for secretory and transmembrane localisation
+              signals using
+              <ol>
+                <li> SignalP 3.0 (gives a comparison of two methods with a nice graphical input)</li>
+                <li> TMHMM</li>
+              </ol>
+              <font face="Courier New, Courier, mono">>gi|12643323|sp|Q9SYQ8|CLV1_ARATH Receptor 
+              protein kinase CLAVATA1 precursor <br>
+              MAMRLLKTHLLFLHLYLFFSPCFAYTDMEVLLNLKSSMIGPKGHGLHDWIHSSSPDAHCSFSGVSCDDDA <br>
+              RVISLNVSFTPLFGTISPEIGMLTHLVNLTLAANNFTGELPLEMKSLTSLKVLNISNNGNLTGTFPGEIL <br>
+              KAMVDLEVLDTYNNNFNGKLPPEMSELKKLKYLSFGGNFFSGEIPESYGDIQSLEYLGLNGAGLSGKSPA <br>
+              FLSRLKNLREMYIGYYNSYTGGVPREFGGLTKLEILDMASCTLTGEIPTSLSNLKHLHTLFLHINNLTGH <br>
+              IPPELSGLVSLKSLDLSINQLTGEIPQSFINLGNITLINLFRNNLYGQIPEAIGELPKLEVFEVWENNFT <br>
+              LQLPANLGRNGNLIKLDVSDNHLTGLIPKDLCRGEKLEMLILSNNFFFGPIPEELGKCKSLTKIRIVKNL <br>
+              LNGTVPAGLFNLPLVTIIELTDNFFSGELPVTMSGDVLDQIYLSNNWFSGEIPPAIGNFPNLQTLFLDRN <br>
+              RFRGNIPREIFELKHLSRINTSANNITGGIPDSISRCSTLISVDLSRNRINGEIPKGINNVKNLGTLNIS <br>
+              GNQLTGSIPTGIGNMTSLTTLDLSFNDLSGRVPLGGQFLVFNETSFAGNTYLCLPHRVSCPTRPGQTSDH <br>
+              NHTALFSPSRIVITVIAAITGLILISVAIRQMNKKKNQKSLAWKLTAFQKLDFKSEDVLECLKEENIIGK <br>
+              GGAGIVYRGSMPNNVDVAIKRLVGRGTGRSDHGFTAEIQTLGRIRHRHIVRLLGYVANKDTNLLLYEYMP <br>
+              NGSLGELLHGSKGGHLQWETRHRVAVEAAKGLCYLHHDCSPLILHRDVKSNNILLDSDFEAHVADFGLAK <br>
+              FLVDGAASECMSSIAGSYGYIAPEYAYTLKVDEKSDVYSFGVVLLELIAGKKPVGEFGEGVDIVRWVRNT <br>
+              EEEITQPSDAAIVVAIVDPRLTGYPLTSVIHVFKIAMMCVEEEAAARPTMREVVHMLTNPPKSVANLIAF </font> 
+              <h3>
+              
+              <hr WIDTH="100%">5.3.</h3>
+              <p>Analyse the sequence above using the Expasy Scan PROSITE search and by SMART 
+                and examine the results. <br>
+                Then take the region of the protein sequence containing LRRs (leucine-rich repeats) 
+                and extract sequences of at least ten randomly selected LRRs (leucine-rich repeats) 
+                identified by SMART, Keep them in a "multi-FASTA" file.. Then perform a search 
+                for repeats usingr <a href="http://www.ebi.ac.uk/Tools/Radar/index.html" target="_blank">RADAR</a> 
+                tool at the EBI and keep the results (HTML file) for future use.. <br>
+              <p>
+                <font color="#000000"><span style="font-weight: bold;">Prediction of
+                    secondary structure elements from protein sequence. Methods, pros and
+                    cons.</span></font>
+                    <hr width="100%">
+                    <h2><a name="Secondary_structure"></a>Protein secondary structure
+                    prediction</h2>
+                    <p><span style="font-weight: bold;">Online tools: </span></p>
+                    <ul>
+                      <li><a
+                     href="http://npsa-pbil.ibcp.fr/cgi-bin/npsa_automat.pl?page=/NPSA/npsa_seccons.html" target="_blank">Network 
+                        Protein Sequence Analysis @ PBIL-IBCP Lyon-Gerland</a> (consensus prediction 
+                        from different algorithms, e-mail not required) </li>
+                      <li><a href="http://www.compbio.dundee.ac.uk/www-jpred/" target="_blank">Jpred</a> 
+                        (consensus prediction from different algorithms, e-mail not required)</li>
+                      <li><a href="http://bioinf.cs.ucl.ac.uk/psipred/" target="_blank">PsiPred </a></li>
+                      <li><a href="http://www.predictprotein.org/" target="_blank">Predict Protein</a> 
+                        (several different algorithms, registration required)<br>
+                      </li>
+                    </ul>
+                    <br>
+                    <span style="font-weight: bold;">Golden rules:</span>&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp; Avoid traditonal Chou and Fasman algorithm.<br>
+                    <div style="margin-left: 120px;"> 
+                      <p>Note the accuracy of the algorithms on standard benchmarks and "real life 
+                        situations".<br>
+                        Use methods based on multiple alignments. Check carefully the alignment - 
+                        avoid redundancies.<br>
+                        Use several independent methods, of similar accuracy.<br>
+                        In case of disagreement, trust PHD (<a
+                     href="http://www.predictprotein.org/" target="_blank">PredictProtein</a>), Jnet 
+                        (<a href="http://www.compbio.dundee.ac.uk/%7Ewww-jpred/" target="_blank">Jpred</a>) 
+                        and <a href="http://bioinf.cs.ucl.ac.uk/psipred/" target="_blank">PsiPred</a>.</p>
+                    </div>
+                    <hr>
+                    <p><span style="font-weight: bold;"><a href="data/2D_3D.ppt" target="_blank">Presentation 
+                      by M. Potocký (from 2004 TIPNET course, addresses may be outdated)</a></span></p>
+                    <hr>
+                    <h3><span style="font-weight: bold;">Tasks:</span></h3>
+                    <h3>5.4<br>
+                    </h3>
+                    <ul>
+                      <li>Extract sequences of the PH or PLDc_2 domain from AtPLDz1 sequence using 
+                        <a href="http://smart.embl-heidelberg.de/" target="_blank">SMART</a> or <a
+                     href="http://pfam.xfam.org/" target="_blank">Pfam</a> tools. </li>
+                    </ul>
+                    <pre>&gt;gi|22331122|ref|NP_188302.2| phospholipase D zeta1 / PLDzeta1 (PLDP1) [Arabidopsis thaliana]<br>MASEQLMSPASGGGRYFQMQPEQFPSMVSSLFSFAPAPTQETNRIFEELPKAVIVSVSRPDAGDISPVLL<br>SYTIECQYKQFKWQLVKKASQVFYLHFALKKRAFIEEIHEKQEQVKEWLQNLGIGDHPPVVQDEDADEVP<br>LHQDESAKNRDVPSSAALPVIRPLGRQQSISVRGKHAMQEYLNHFLGNLDIVNSREVCRFLEVSMLSFSP<br>EYGPKLKEDYIMVKHLPKFSKSDDDSNRCCGCCWFCCCNDNWQKVWGVLKPGFLALLEDPFDAKLLDIIV<br>FDVLPVSNGNDGVDISLAVELKDHNPLRHAFKVTSGNRSIRIRAKNSAKVKDWVASINDAALRPPEGWCH<br>PHRFGSYAPPRGLTDDGSQAQWFVDGGAAFAAIAAAIENAKSEIFICGWWVCPELYLRRPFDPHTSSRLD<br>NLLENKAKQGVQIYILIYKEVALALKINSVYSKRRLLGIHENVRVLRYPDHFSSGVYLWSHHEKLVIVDN<br>QVCFIGGLDLCFGRYDTFEHKVGDNPSVTWPGKDYYNPRESEPNTWEDALKDELERKKHPRMPWHDVHCA<br>LWGPPCRDVARHFVQRWNYAKRNKAPYEDSIPLLMPQHHMVIPHYMGRQEESDIESKKEEDSIRGIRRDD<br>SFSSRSSLQDIPLLLPHEPVDQDGSSGGHKENGTNNRNGPFSFRKSKIEPVDGDTPMRGFVDDRNGLDLP<br>VAKRGSNAIDSEWWETQDHDYQVGSPDETGQVGPRTSCRCQIIRSVSQWSAGTSQVEESIHSAYRSLIDK<br>AEHFIYIENQFFISGLSGDDTVKNRVLEALYKRILRAHNEKKIFRVVVVIPLLPGFQGGIDDSGAASVRA<br>IMHWQYRTIYRGHNSILTNLYNTIGVKAHDYISFYGLRAYGKLSEDGPVATSQVYVHSKIMIVDDRAALI<br>GSANINDRSLLGSRDSEIGVLIEDTELVDSRMAGKPWKAGKFSSSLRLSLWSEHLGLRTGEIDQIIDPVS<br>DSTYKEIWMATAKTNTMIYQDVFSCVPNDLIHSRMAFRQSLSYWKEKLGHTTIDLGIAPEKLESYHNGDI<br>KRSDPMDRLKAIKGHLVSFPLDFMCKEDLRPVFNESEYYASPQVFH</pre>
+                    <ul>
+                      <li>Predict secondary structure for one of these domains with at least two different 
+                        programs and compare the results (<b><font color="#FF9900">Results of at least 
+                        one program, e.g. NPSA, will be accepted for credits</font></b>). </li>
+                    </ul>
+                    <hr>
+                    <br>
+                    <h2>Prediction of RNA secondary structure</h2>
+                    <ul>
+                      <li><a href="http://rna.tbi.univie.ac.at//cgi-bin/RNAWebSuite/RNAfold.cgi" target="_blank">RNAFold</a> 
+                        web server</li>
+                      <li>Moscow state university <a href="http://www.genebee.msu.su/services/rna2_reduced.html" target="_blank">RNA 
+                        folding server</a> (allows incorporation of alignment data but performs poorly 
+                        with single sequence)</li>
+                      <li>Classic: <span style="font-style: italic;"><a href="http://mfold.rna.albany.edu/?q=mfold" target="_blank">mfold</a></span> 
+                        (use the 2.3 version that allows temperature settings)<br>
+                      </li>
+                    </ul>
+                    <hr>
+                    <h3><span style="font-weight: bold;">Tasks:</span></h3>
+                    <h3>5.5<br>
+                    </h3>
+                    <p>Predict <font color="#FF9900"><b><font color="#339900">2D structure of&nbsp; 
+                      hop viroid RNA</font></b></font><br>
+                    </p>
+                    <pre>&gt;gi|13872751|emb|AJ290412.1|HLA290412 Hop latent viroid sequence of 'thermomutant' T229<br>CTGGGGAATACACTACGTGACTTACCTGTATGATGGCAAGGGTTCGAAGAGGGATCCCCGGGGAAACCTA<br>CTCGAGCGAGGCGGAGATCGAGCGCCAGTTCGTGCGCGGCGACCTGAAGTTGCTTCGGCTTCTTCTTGTT<br>CGCGTCCTGCGTGGAACGGCTCCTTCTCCACACCAGCCGGAGTTGGAAACTACCCGGTGGATACAACTCT<br>TGAGCGCCGAGCTTTACCTGCAGAAGTTCACATAAAAAGTGCCCAT</pre>
+                    <br>
+                    <font color="#000000">
+                    </font>
+    </div>
+</body>
+</html>
