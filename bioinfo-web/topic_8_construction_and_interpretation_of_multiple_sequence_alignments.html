@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="bioinfo.css" />
+<title>Topic 8 Construction and interpretation of multiple sequence alignments</title>
+</head>
+<body>
+    
+        <div id="menu">
+            <ul class="menuitems">
+        
+<li class="menuitem">
+ <a href="introduction_schedule.html">Introduction</a>
+</li>
+<li class="menuitem">
+ <a href="topic_1_basic_handling_of_sequence_data.html">Topic 1 Basic handling of sequence data</a>
+</li>
+<li class="menuitem">
+ <a href="topic_2_public_data_resources.html">Topic 2 Public Data resources</a>
+</li>
+<li class="menuitem">
+ <a href="topic_3_sequence_similarity_searches_i.html">Topic 3 Sequence similarity searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_4_sequence_similarity_searches_ii.html">Topic 4 Sequence similarity searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_5_sequence_motif_searches_i.html">Topic 5 Sequence motif searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_6_sequence_motif_searches_ii.html">Topic 6 Sequence motif searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_7_playing_with_dna.html">Topic 7 Playing with DNA</a>
+</li>
+<li class="menuitem active">
+ <a href="topic_8_construction_and_interpretation_of_multiple_sequence_alignments.html">Topic 8 Construction and interpretation of multiple sequence alignments</a>
+</li>
+<li class="menuitem">
+ <a href="course_resources_installations.html">Course resources</a>
+</li>
+</ul>
+            <h3><font color="#990000">Online tools</font></h3>
+<ul class="menuitems">
+  <li class="menuitem"><a href="http://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a></li>
+  <li class="menuitem"><a href="http://bioinformatics.org" target="_blank">Bioinformatics.org</a></li>
+  <li class="menuitem"><a href="http://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a></li>
+  <li class="menuitem"><a href="http://www.expasy.org/" target="_blank">ExPaSy</a> proteomics server</li>
+</ul>
+</div>
+    <div id="content">
+        <h1 class="main_heading"> Lesson 8: Construction and interpretation of multiple 
+            sequence alignments</font></h1>
+            <h3> <font color="#000000">Automated vs. manual methods - CLUSTAL,
+                T-COFFEE,&nbsp; MUSCLE, MACAW. Alignment formats. Practical construction
+                of a protein sequence alignment.</font> </h3>
+            <h4>
+              <hr width="100%"></h4>
+            <h2>
+              <font color="#000000">How to produce a phylogenetic tree: start with a
+              </font><font color="#FF0000">good</font><font color="#000000"> alignment</font></h2>
+            <h3>
+              <font color="#000000">Tools for alignment construction</font></h3>
+            <ul>
+              <li> <font color="#000000">get yourself a local program - this takes a
+                  lot of time and computing power</font></li>
+              
+          <li> <font color="#000000">however, it is worth looking at<a href="http://us.expasy.org/"
+                    target="_blank"> Expasy</a> - <a href="http://www.tcoffee.org/" target="_blank">T-Coffee</a> 
+            or (new and better) <a href="http://msa.cgb.ki.se/" target="_blank">KALIGN</a> 
+            or many more... and at <a target="_blank" href="http://www.ebi.ac.uk/Tools/msa/">EBI</a> 
+            (MAFFT, MUSCLE ) or NCBI (<a href="https://www.ncbi.nlm.nih.gov/tools/cobalt/re_cobalt.cgi"
+                    target="_blank">COBALT</a>)</font></li>
+              <li><font color="#000000">local versions of many programs are available
+                  ... e.g. MUSCLE <a href="http://www.drive5.com/muscle/" target="_blank">here</a></font></li>
+            </ul>
+            <hr width="100%">
+            <h3>
+              Alignment formats</h3>
+            <p>- lots, and not always compatible with tree-drawing programs <br>
+              - examples: <a href="data/tcoffee.aln" target="_blank">ALN</a>, <a href="data/tcoffee.msf"
+                target="_blank">MSF</a> (PileUp/GCG), <a href="data/tcoffee.phylip"
+                target="_blank">Phylip</a> </p>
+            <p>Format conversion: several common formats via <b>BioEdit</b>.<br>
+            </p>
+            <hr width="100%">
+            <h2> <font color="#CC0000">Manual or automatic, that is the question.</font></h2>
+            
+        <p><font color="#000000">There is already a science of evaluating alignments ... 
+          and a database of reference ones (<a href="http://www.lbgi.fr/balibase/"
+                  target="_blank">BAliBASE</a>).</font></p>
+            <h4> <font color="#000000">Semi-manual - MACAW:</font></h4>
+            <ul>
+              <li> <font color="#009900">locally installed, free, for Mac and PC</font></li>
+              <li> <font color="#009900">interactive domain definition</font></li>
+              <li> <font color="#009900">statistical data provided</font></li>
+              <li> <font color="#FF6600">may produce false-positive blocks (read the
+                  on-line manual!)</font></li>
+              <li><font color="#FF6600">old, not very stable, behavior under newer OS
+                  problematic</font></li>
+              <li><font color="#FF6600">proprietary file format, results need editing
+                  for use in other programs</font></li>
+            </ul>
+            <h4>
+              <font color="#000000">Automatic - e.g. CLUSTAL:</font></h4>
+            <ul>
+              <li> <font color="#009900">"objective" results</font></li>
+              <li>
+                <font color="#009900">a number of servers available (although it is
+                  better
+                  to have your own)</font></li>
+              <li>
+                <font color="#009900">recommended for well-conserved proteins</font></li>
+              <li>
+                <font color="#FF9900">empiric parameters (e.g. gap penalties)</font></li>
+              <li> <font color="#FF6600">may not work for divergent sequences (Clustal
+                  is notoriously bad at this, newer programs better)</font></li>
+            </ul>
+            <h4>Best of both - use BioEdit to "tune" an alignment produced by automatic
+              tools: </h4>
+            <ul>
+              <li><font color="#009900">allows manual editing of a program output or de
+                  novo manual alignment</font></li>
+              <li><font color="#009900">alignments can be merged</font></li>
+              <li><font color="#009900">locally installed, free</font></li>
+              <li><font color="#FF9900">PC only</font></li>
+              <li><font color="#FF6600">somewhat contraintuitive user interface - at
+                  least for a spoiled Windows user</font></li>
+            </ul>
+            <hr width="100%">
+            <h2>
+              <a name="tasks"></a>Tasks</h2>
+            <b><font color="#CC0000">This time, you can chose from the following data
+                input options:</font></b>
+            <hr width="100%">
+            <h4>
+              Take at least 10 sequences of your choice from the combination of    </h4>
+            <ul>
+              <li> input of <a href="topic_6_sequence_motif_searches_ii.html">Task 6.2</a></li>
+              <li> sequences obtained in Tasks <a href="topic_2_public_data_resources.html">2.3</a> and <a href="topic_4_sequence_similarity_searches_ii.html">4.2</a>.</li>
+            </ul>
+            <h4>in a manner that would address the following quastions:</h4>
+            <p>A. Did the diversification between GDIs and REPs take place &quot;once for ever&quot;, or repatably in different lineages? (Hint: chose both REPs and GDIs representing a complete set for at least one plant and at least one opisthokont.)</p>
+            <p>B. How old is the diversity of GDIs? (Hint: include at least one REP for outgroup, two or more will make the alignment easier. Chose complete sets of GDIs for a selection of organisms and make sure you know what your question is).</p>
+            <h4><br>
+          <b>The tasks may take more time than usual - let me know if you need more time!</b>.</h4>
+            <hr width="100%">
+            <h3>
+              8.1</h3>
+            Use T-Cofee to align your sequences.<font color="#000000"><b>DO NOT START TOO MANY JOBS AT THE
+                SAME TIME. It  may be slow.</b> </font>Then do the same using 1) KALIGN and
+            2) MAFFT or MUSCLE and 3) COBALT.
+                <ul>
+              <li>Compare the results and performance (computation time) of these
+                programs.</li>
+              <li><font color="#000000">Examine the output file formats.</font></li>
+            </ul>
+            <h3>
+              <hr width="100%">8.2</h3>
+            Align the sequences of your choice using either Clustal X (local) or Clustal 
+        Omega (at the <a href="https://www.ebi.ac.uk/Tools/msa/" target="_blank">EBI multiple 
+        alignment site</a>).. 
+        <ul>
+              <li>
+                Try to start with the default parameters and then try at least one
+                variation
+                of the Gap opening and Gap extension cost.</li>
+              <li>
+                Look at the Quality menu: Show low scoring segments.</li>
+            </ul>
+            Keep the alignment (*.aln) file.
+            <br>
+            <hr width="100%">
+            <h3>
+              8.3</h3>
+            Align the same sequences using either MACAW or BioEdit. (If you have chosen
+            the option A, you may use your old alignment from Lesson 6, throw out
+            surplus sequences and merge the additional sequences into the alignment). <br>
+            <b>HINT</b>: try the BLOSUM62 matrix in MACAW. <br>
+            Keep the resulting file for future use.
+            <hr width="100%">
+            <br>
+        Compare the results of all three approaches in Bioedit and chose the best alignment 
+        for manual fine-tuning.
+        <h3> Finalizing the alignments</h3>
+<hr>
+You should end up having at least two independently constructed alignments of 
+the same set of sequences (one from an automated method, the other manually &quot;tuned&quot; 
+and kept in the Fasta, native BioEdit (*.bio) or Macaw (*.mcw) format. Produce 
+a copy of each of the files for future use in three formats: 
+<ol>
+  <li> in either Fasta or Clustal (*.aln) format.</li>
+  <li> in the PHYLIP (interleaved) format (*.phy).</li>
+  <li>in the PHYLIP (interleaved) format (*.phy), gaps removed (see below).</li>
+</ol>
+<h4>Format conversion hints:</h4>
+<p>In ClustalX or BioEdit, you can chose the option "save as Phylip 4". In Macaw 
+  you have to do it manually by one of two methods:</p>
+<ol>
+  <li> Export the alignment as text first, then use Word to remove/add extraneous 
+    spaces, numbers and names and to add the <font color="#FF0000">sequence</font> 
+    and <font color="#3333FF">character</font> count. (Keep the total of 10+1 
+    positions for sequence name and spaces, though this requirement may not be 
+    strict). </li>
+  <li>Rename a copy of the *.mcw file to *.txt and edit it manually to Fasta (sequence 
+    names from the first part of the file have to be matched to sequences in the 
+    second part).</li>
+</ol>
+<p>n the next step, go over your PHYLIP format alignments and remove all positions 
+  with gaps (Word is OK for that; of course, you have to recalculate the character 
+  count). Alternatively, you can use the &quot;strip columns containing gaps&quot; 
+  command in BioEdit. </p>
+<p>Keep the gapfree versions as separate files. </p>
+<h4>
+Example of the Phylip format:</h4>
+
+
+<p>
+    <pre>
+11   761
+SpGDI1     ---------- ---------- ---------- ---------- --MDEEYDVI
+ScGDI1     ---------- ---------- ---------- -------MDQ ETIDTDYDVI
+DmGDI      ---------- ---------- ---------- ---------- --MDEEYDVD
+CeGDI1     ---------- ---------- ---------- ---------- --MDEEYDAI
+HsGDI2     ---------- ---------- ---------- ---------- --MNEEYDVI
+GgGDI      ---------- ---------- ---------- ---------- --MNEEYDVI
+HsGDI1     ---------- ---------- ---------- ---------- --MDEEYDVI
+DmRepP1    ---------- ---------- ---------- --------ML DDLPEQFDLV
+HsREP2     ---------- ---------- ---------- --------MA DNLPTEFDVV
+CeY67D2    ---------- ---------- ---------- --------MD EKLPESVDVV
+ScMRS6     MLSPERRPSM AERRPSFFSF TQNPSPLVVP HLAGIEDPLP ATTPDKVDVL
+
+           VLGTGLTECV LSG-LLSVDG KKVLHIDRND YYGADSASLN -LTQLYALFR
+           VLGTGITECI LSG-LLSVDG KKVLHIDKQD HYGGEAASVT -LSQLYEKFK
+           VLGTGLKECI LSGIMLSVSG KKVLHIDRNK YYGGESASIT PLEELFQRYR
+           VLGTGLKECI ISG-MLSVSG KKVLHIDRNN YYGGESASLT PLEQLYEKFH
+           VLGTGLTECI LSG-IMSVNG KKVLHMDRNP YYGGESASIT PLEDLYKRFK
+           VLGTGLTECI LSG-IMSVNG KKVLHMDRNS YYGGESASIT PLEDLYKRFN
+           VLGTGLTECI LSG-IMSVNG KKVLHMDRNP YYGGESSSIT PLEELYKRFQ
+           VIGTGFTESC IAA-AGSRIG KSVLHLDSNE YYGDVWSSFS -MDALCARLD
+           IIGTGLPESI LAA-ACSRSG QRVLHIDSRS YYGGNWASFS -FSGLLSWLK
+           VLGTGLPEAI LAS-ACARAG LSVLHLDRNE YYGGDWSSFT -MSMVHEVTE
+           IAGTGMVESV LAA-ALAWQG SNVLHIDKND YYGDTSATLT -VDQIKRWVN 
+    </pre>
+    (alignment truncated) 
+</p>
+    </div>
+</body>
+</html>
