@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="bioinfo.css" />
+<title>Topic 10 Phylogenetic trees I</title>
+</head>
+<body>
+    
+        <div id="menu">
+            <ul class="menuitems">
+        
+<li class="menuitem">
+ <a href="introduction_schedule.html">Introduction</a>
+</li>
+<li class="menuitem">
+ <a href="topic_1_basic_handling_of_sequence_data.html">Topic 1 Basic handling of sequence data</a>
+</li>
+<li class="menuitem">
+ <a href="topic_2_public_data_resources.html">Topic 2 Public Data resources</a>
+</li>
+<li class="menuitem">
+ <a href="topic_3_sequence_similarity_searches_i.html">Topic 3 Sequence similarity searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_4_sequence_similarity_searches_ii.html">Topic 4 Sequence similarity searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_5_sequence_motif_searches_i.html">Topic 5 Sequence motif searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_6_sequence_motif_searches_ii.html">Topic 6 Sequence motif searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_7_playing_with_dna.html">Topic 7 Playing with DNA</a>
+</li>
+<li class="menuitem">
+ <a href="topic_8_construction_and_interpretation_of_multiple_sequence_alignments.html">Topic 8 Construction and interpretation of multiple sequence alignments</a>
+</li>
+<li class="menuitem">
+ <a href="topic_9_3d_structures.html">Topic 9</a>
+</li>
+<li class="menuitem">
+ <a href="course_resources_installations.html">Course resources</a>
+</li>
+<li class="menuitem active">
+ <a href="topic_10_phylogenetic_trees_i.html">Topic 10 Phylogenetic trees I</a>
+</li>
+</ul>
+            <h3><font color="#990000">Online tools</font></h3>
+<ul class="menuitems">
+  <li class="menuitem"><a href="http://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a></li>
+  <li class="menuitem"><a href="http://bioinformatics.org" target="_blank">Bioinformatics.org</a></li>
+  <li class="menuitem"><a href="http://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a></li>
+  <li class="menuitem"><a href="http://www.expasy.org/" target="_blank">ExPaSy</a> proteomics server</li>
+</ul>
+</div>
+    <div id="content">
+        <h1 class="main.heading"> Topic 10: Phylogenetic trees I</h1>
+        <h3> <font color="#000000">Construction and critical interpretation of trees based 
+            on a pre-existing alignment. </font></h3>
+          <font color="#000000">Problem of meaningful data selection. Construction of trees 
+          using ClustalX and PHYLIP.</font> 
+          <h4> 
+            <hr WIDTH="100%"></h4>
+          
+          <h2>
+          <font color="#000000">Considerations</font></h2>
+          
+          <ul>
+          <li>
+          <font color="#000000">A tree is only as good as the alignment you started
+          with</font></li>
+          
+          <li>
+          <font color="#000000">Gaps are no data - throw them out!</font></li>
+          
+            <li> <font color="#000000">A tree without statistics is worthless: do bootstrapping 
+              (500 cycles is better than 100) and plot the bootstrap values onto branches 
+              of a tree based on original data.</font></li>
+          
+            <li> <font color="#000000">Always present your tree including the method (NJ 
+              is OK for first look at sequence data)</font></li>
+          
+          <li>
+          <font color="#000000">There is a difference between an rooted tree and
+          an unrooted one.</font></li>
+          </ul>
+          
+          <hr WIDTH="100%">
+          <h3>
+          Methods</h3>
+          Read documentation of the programs described below for theory. The Treecon manual 
+          (available from the entry page) is a good starter. 
+          <ul>
+            <li> <b>Slow, step by step approach: <font color="#CC33CC">Phylip</font></b> 
+              <ul>
+                <li><font color="#000000"><b>Making and plotting a tree</b></font></li>
+              </ul>
+            </li>
+            <ol>
+              <li> Prepare your alignment in the Phylip format and use it as <em><strong>infile</strong></em>.</li>
+              <li> Calculate sequence to sequence distances using PROTDIST. You can chose 
+              your substitution matrix (e.g. PAM). </li>
+              <li> Rename the old infile (e.g. to infile0), rename the outfile to infile and feed it into 
+                the program NEIGHBOR, which calculates tree topology. Here you can decide whether your tree should be rooted. There will 
+                be TWO output files - outfile and<strong><em> outtree</em></strong>.</li>
+              <li>Rename outfile to get it out of the way (I suggest to oitfile1). Use <strong><em>outtree</em></strong> to plot your tree in a graphical format. To do this, 
+                rename outtree to intree an then:</li>
+              <ul>
+                <li> If the tree was unrooted, use DRAWTREE.</li>
+                <li> If it was rooted, use DRAWGRAM.    </li>
+              </ul>
+              <li>Save the output (<em><strong>plotfile</strong></em>) in an appropriate graphic format.Rename it to something reasonable. Rename the outtree to get it out of the way (or to keep it)-</li>
+            </ol>
+            <ul>
+              <li><font color="#000000"><b>Bootstrapping the tree</b></font></li>
+            </ul>
+            <ol>
+              <li>Return to the <i><b>original infile</b></i> and prepare a bootstrapped data set: SEQBOOT (100 x bootstrap only in the 
+                course). Rename the original infile to get it out of the way. Rename outfile 
+                to infile.</li>
+              <li>Run the programs PROTDIST (this is the most time-consuming 
+                step). 
+                and NEIGHBOR as above but with the multiple data sets (100 sets) option in each case.</li>
+              <li>Rename outtree to intree and calculate consensus tree using CONSENSE.</li>
+              <li> <b>Outfile</b> of this step contains your tree in a text format; including the bootstrap values.</li>
+              <li>Add bootstrap values to nodes of the tree produced from original data manually (conventionally only those over 
+                50 %).</li>
+            </ol>
+            <blockquote> 
+              <p>&nbsp; </p>
+            </blockquote>
+            <li><b>Let the machine do it, almost no user-defined options, very fast but 
+              maybe less accurate: <font color="#FF6600">ClustalX</font></b>
+              <ol>
+                <li> Import your alignment in *.aln format into ClustalX (unlike in othe 
+                  cases, you do not have to worry about gaps ... you'll soon see why).</li>
+                <li> Excude positions with gaps (Tree menu), if you want to (<b><font color="#CC6600">ADVISABLE</font></b>).</li>
+                <li> Run Bootstrap N-J TREE (and realize how much faster it is - you even can afford 
+                  1000 x !). Examine the output file (*.phb).</li>
+                <li> Use NJPLOT to visualize the tree.</li>
+              </ol>
+            </li>
+          </ul>
+          <ul>
+          </ul>
+          
+          <h2>
+          GOOD LUCK!</h2>
+          
+          <p><br>
+          <hr WIDTH="100%">
+          <h2>
+          <a NAME="tasks"></a>Tasks</h2>
+          <p>To begin with, you should have from the previous
+          lessons (8 and 9) at least two alignments obtained by two different methods, preferentially one of them including some manual work (i.e. a MACAW-based alignment or a result of some automated tool finely tuned in BioEdit). Each of these two alignments should be in 3 formats:</p>
+          <p>1. FASTA (*.fst or *.txt) or CLUSTAL (*.ALN)</p>
+          <p>2. Phylip interleaved/Phylip 4 (*.phy)</p>
+          <p>3.  Phylip interleaved/Phylip 4 with asll columns containing gaps removed (*.phy)</p>
+          <p>If you do not have these data from your own work, use the <a href="data/alignments.zip">model data set</a>. <br>
+            </p>
+          <p><b>NOTE:</b> you do not need to do all the tasks, but you should try
+            at least once each method demonstrated.</p>
+          <hr WIDTH="100%">
+          <h4>
+          9.1</h4>
+          <b><font color="#FF0000">Using the same method, compare the trees produced
+          from a manual alignment and an automated one </font></b><font color="#000000">(use
+          ungapped data or ungapped tree calculation in ClustalX).</font>
+          <br>
+          <hr WIDTH="100%">
+          <h4>
+          9.2</h4>
+          <b><font color="#FF0000">Using the same method, compare the trees produced
+          from a gapped and ungapped alignment </font></b><font color="#000000">(use
+          data produced by the same approach).</font>
+          <br>
+          <hr WIDTH="100%">
+          <h4>
+          9.3</h4>
+          <b><font color="#FF0000">Compare the trees produced from the same alignment
+          by two methods</font></b><font color="#000000"> (use ungapped data or ungapped
+          tree in Clustal X).</font>
+          <hr WIDTH="100%">
+    </div>
+</body>
+</html>
