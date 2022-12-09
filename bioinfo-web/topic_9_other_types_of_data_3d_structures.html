@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="bioinfo.css" />
+<title>Topic 9 Other types of data - 3D Structures</title>
+</head>
+<body>
+    
+        <div id="menu">
+            <ul class="menuitems">
+        
+<li class="menuitem">
+ <a href="introduction_schedule.html">Introduction</a>
+</li>
+<li class="menuitem">
+ <a href="topic_1_basic_handling_of_sequence_data.html">Topic 1 Basic handling of sequence data</a>
+</li>
+<li class="menuitem">
+ <a href="topic_2_public_data_resources.html">Topic 2 Public Data resources</a>
+</li>
+<li class="menuitem">
+ <a href="topic_3_sequence_similarity_searches_i.html">Topic 3 Sequence similarity searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_4_sequence_similarity_searches_ii.html">Topic 4 Sequence similarity searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_5_sequence_motif_searches_i.html">Topic 5 Sequence motif searches I</a>
+</li>
+<li class="menuitem">
+ <a href="topic_6_sequence_motif_searches_ii.html">Topic 6 Sequence motif searches II</a>
+</li>
+<li class="menuitem">
+ <a href="topic_7_playing_with_dna.html">Topic 7 Playing with DNA</a>
+</li>
+<li class="menuitem">
+ <a href="topic_8_construction_and_interpretation_of_multiple_sequence_alignments.html">Topic 8 Construction and interpretation of multiple sequence alignments</a>
+</li>
+<li class="menuitem">
+ <a href="topic_9_other_types_of_data_3d_structures.html">Topic 9 Other types of data</a>
+<ul class="menuitems">
+
+<li class="menuitem active">
+ <a href="topic_9_other_types_of_data_3d_structures.html">3D Structures</a>
+
+<li class="menuitem ">
+ <a href="topic_9_other_types_of_data_transcriptomes.html">Transcriptomes</a>
+</ul>
+</li>
+<li class="menuitem">
+ <a href="topic_10_phylogenetic_trees.html">Topic 10 Phylogenetic trees</a>
+</li>
+<li class="menuitem">
+ <a href="course_resources_installations.html">Course resources</a>
+</li>
+</ul>
+            <h3><font color="#990000">Online tools</font></h3>
+<ul class="menuitems">
+  <li class="menuitem"><a href="http://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/sms2/index.html" target="_blank">SMS</a></li>
+  <li class="menuitem"><a href="http://bioinformatics.org" target="_blank">Bioinformatics.org</a></li>
+  <li class="menuitem"><a href="http://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a></li>
+  <li class="menuitem"><a href="http://www.expasy.org/" target="_blank">ExPaSy</a> proteomics server</li>
+</ul>
+</div>
+    <div id="content">
+        <h1 class="main_heading"> Lesson 9: Other types of data: 3D structures</h1>
+        <font color="#000000"><span style="font-weight: bold;">3D Structures. Fold Prediction. 
+            Homology modelling using SPDV software. Evaluation and visualization of the model<b>.</b></span></font><b> 
+            Sequence-structure alignments. </b> 
+            <hr width="100%">
+            <h2><a name="Secondary_structure"></a><font color="#000000">Where
+            can I obtain and analyze structural data?</font></h2>
+            <div style="margin-left: 80px;"> 
+              <p><font color="#000000"><span style="font-weight: bold;">Structure databases</span></font></p>
+              <p><font color="#000000">RCSB Protein Databank (<a href="https://www.rcsb.org/" target="_blank">http://www.rcsb.org/</a>)
+                <br>
+                Entrez Structure (<a href="http://www.ncbi.nlm.nih.gov/Structure/" target="_blank">http://www.ncbi.nlm.nih.gov/Structure/</a>)<br>
+                </font> </p>
+              <p><font color="#000000"><span style="font-weight: bold;">Fold Databases</span></font></p>
+              <p><font color="#000000">SCOP Structural Classification of Proteins (<a href="http://scop.mrc-lmb.cam.ac.uk/scop/" target="_blank">http://scop.mrc-lmb.cam.ac.uk/scop/</a>)</font><br>
+                <font color="#000000"><br>
+                <span style="font-weight: bold;">Structural Alignment Tools</span></font></p>
+              <p><font color="#000000">VAST (<a href="http://www.ncbi.nlm.nih.gov/Structure/VAST/vastsearch.html" target="_blank">http://www.ncbi.nlm.nih.gov/Structure/VAST/vastsearch.html</a>)<br>
+                </font><font color="#000000"><a href="http://www.ebi.ac.uk/msd-srv/ssm/" target="_blank">PDBeFold</a></font><font color="#000000"><br>
+                <br>
+                <span style="font-weight: bold;">Fold prediction and homology modelling</span></font></p>
+              <p><font color="#000000"><a href="http://www.sbg.bio.ic.ac.uk/%7Ephyre2/html/page.cgi?id=index" target="_blank">PHYRE</a> 
+                Protein Fold Recognition<br>
+                CPHmodels homology modeling (<a href="http://www.cbs.dtu.dk/services/CPHmodels/" target="_blank">http://www.cbs.dtu.dk/services/CPHmodels/</a>)<br>
+                Geno3D (<a href="http://geno3d-pbil.ibcp.fr/cgi-bin/geno3d_automat.pl?page=/GENO3D/geno3d_home.html" target="_blank">http://geno3d-pbil.ibcp.fr/cgi-bin/geno3d_automat.pl?page=/GENO3D/geno3d_home.html</a>) 
+                <br>
+
+                </p>
+              <p><font color="#000000">Robetta </font>full-chain protein structure prediction 
+                server <font color="#000000">(<a href="http://robetta.bakerlab.org/" target="_blank">http://robetta.bakerlab.org/</a>)<br>
+                Swiss-Model (<a href="http://www.expasy.org/swissmod/SWISS-MODEL.html" target="_blank">http://www.expasy.org/swissmod/SWISS-MODEL.html</a>)</font>
+              <br>
+                  AlphaFold (<a href="https://alphafold.ebi.ac.uk/" target="_blank">https://alphafold.ebi.ac.uk/</a>)
+              </p>
+              <p><font color="#000000"><a href="http://www.genebee.msu.su/spdbv/" target="_blank">Deepview</a> 
+                - the SPDBV viewer and modelling software (with a great tutorial)</font></p>
+              <p><font color="#000000"><b>Model evaluation</b></font></p>
+              <p><font color="#000000"><a href="https://swift.cmbi.umcn.nl/servers/html/index.html" target="_blank">WHAT 
+                IF/WHATCHECK</a><br>
+                <br>
+                </font></p>
+              </div>
+            <h2><font color="#000000">Simple homology modelling</font><font color="#000000"> 
+              - demo</font></h2>
+            <h4><font color="#000000">(originally thanks to Martin Potocký, 
+              much evolved since)<br>
+              </font></h4>
+            <ul>
+              <li>Find at least one, better two structures of any proteins PH domain and get 
+                corresponding PDB files (use e.g. NCBI Conserved Domains search with the keywords 
+                "pleckstrin homology" ... unfortunately, the search is case-insensitive, follow 
+                the Structure link and find your way among the structures with the aid of 
+                the right-hand tree).</li>
+            </ul>
+            <ul>
+              <li>Examine the structures in your browser (with the Cn3D plug-in installed) 
+                or in SPDV. Focus on structure similarity.</li>
+            </ul>
+            <ul>
+              <li>Find structural homologs for <span style="font-weight: bold;">PH domain 
+                </span>of<span style="font-weight: bold;"> AtPLDzeta1</span>(see Lesson 5, 
+                sequence <a href="data/PH.txt">here</a>) with the Fold Prediction server <a href="http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index" target="_blank">PHYRE</a> (local copy of results <a href="https://kfrserver.natur.cuni.cz/lide/fatima/bioinfo/data/PHYRE/summary.html" target="_blank">here</a>)
+                . Examine the results.</li>
+            </ul>
+            <ul>
+              <li>The best PHYRE model may be already good enough; however, for training purposes 
+                we shall also try another method. Download more than one homologue structures 
+                with best E-values as PDB files - they will serve as templates for our model. 
+              </li>
+            </ul>
+            <ul>
+              <li>Open the template structures in SPDV and superimpose them with the "Iterative 
+                Magic Fit" tool from the "Fit" menu. (They may or may not fit depending what 
+                you chose - if they do not fit, choose one to proceed).</li>
+            </ul>
+            <ul>
+              <li>Choose the "Load Raw Sequence to Model" item of the "SwissModel" Menu to 
+                load the file containing fasta file with AtPLDz1 PH domain.<br>
+                The protein is built as a long perfect alpha helix.</li>
+            </ul>
+            <ul>
+              <li>Thread the sequence on the template(s) using tools in "Fit"&nbsp; menu.</li>
+            </ul>
+            <ul>
+              <li>Make sure the current layer is AtPLDz1_PH, and click on the little black 
+                arrow located at the right of the question mark of the Align Window. The window 
+                expands, and displays a curve depicting how each residue likes its surrounding. 
+                If a residue is "happy", its energy is below zero, whereas an unhappy residue 
+                will have an energy above the zero axis. This is the mean force potential 
+                energy.</li>
+            </ul>
+            <ul>
+              <li>Now you can play with the alignment to get lower energy and acceptable bond 
+                lengths.</li>
+            </ul>
+            <ul>
+              <li>You can evaluate how good your threading is by using the "select aa making 
+                clashes" items of the "Select" menu. This will allow you to quickly focus 
+                on potentially problematic regions. You can then choose the "Fix Selected 
+                Sidechains" item of the "Tools" menu, which will browse the rotamer library 
+                to choose the best rotamer (use the &quot;quick and dirty&quot; method to 
+                avoid crashing the workstation).</li>
+            </ul>
+            <ul>
+              <li>When everything seems okay, you can submit a modelling request to Swiss-Model 
+                simply by choosing the "Submit modelling request" of the "Swiss-model" menu, 
+                assuming that you have registered there. By default, you will get a Swiss-PdbViewer 
+                project file, with your model aligned onto the templates you used, and ready 
+                for comparison. The project comes back at the e-mail address you have provided. 
+                as a PDB-formatted file.</li>
+            </ul>
+            <ul>
+              <li>Inspect output of evaluation of WhatCheck software generated for your model 
+                (for an example look <a href="data/proj_AtPLD_PH-swiss_model-FINAL-WhatCheck.txt" target="_blank">here</a>).</li>
+            </ul>
+            <ul>
+              <li>Play with the problematic regions and then resubmit the model. Repeat until 
+                the model is perfect or until you smash your computer (more often).</li>
+            </ul>
+            <h2><font color="#000000">How
+            can I generate nice pictures of my model?</font></h2>
+            <ul>
+              <li>DeepView does not plot good pictures :-( .</li>
+            </ul>
+            <ul>
+              <li>There are a lot of programs, most of them commercial or not running under
+                Windows :-( (with the remarkable and most welcome exception of <a href="http://www.povray.org" target="_blank">PoVRay</a>! 
+                ... and DeepView CAN export the resulting "scene" in the PovRay format)</li>
+            </ul>
+            <p>&nbsp; </p>
+            <hr width="100%">
+            <h2> <a name="tasks"></a>Tasks</h2>
+            <h3> 9.1.</h3>
+        <p>
+            Download the PDB structure 1D5T - (bovine GDI) and examine it in Cn3D or DeepView. 
+            Examine also links from this sequence in the 3D domains database. Align a selected 
+            plant sequence from your collection of GDIs to the 3D structure in DeepView, examine
+            the results and try to produce <b><font color="#ffcc00">a picture</font></b>.</p>
+        <p>Compare your model with de-novo predictions of AT3G59920 (ATGDI2):</p>
+        <ul>
+            <li><a href="data/AT3G59920-model1.pdb">Model 1</a> </li>
+            <li><a href="data/AT3G59920-model2.pdb">Model 2</a> </li>
+            <li><a href="data/AT3G59920-model3.pdb">Model 3</a> </li>
+            <li><a href="data/AT3G59920-model4.pdb">Model 4</a> </li>
+            <li><a href="data/AT3G59920-model5.pdb">Model 5</a> </li>
+        </ul>
+        <hr>
+        <h3>9.2</h3>
+        <p>Compare the PH domain secondary structure predictions from Task 5.4 with example
+predictions of 3D structures of the same domain from lesson 5 were computed on Robetta: </p>
+        <ul>
+            <li><a href="data/PHDomain-model1.pdb">Model 1</a> </li>
+            <li><a href="data/PHDomain-model2.pdb">Model 2</a> </li>
+            <li><a href="data/PHDomain-model3.pdb">Model 3</a> </li>
+            <li><a href="data/PHDomain-model4.pdb">Model 4</a> </li>
+            <li><a href="data/PHDomain-model5.pdb">Model 5</a> </li>
+        </ul>
+
+
+    </div>
+</body>
+</html>
