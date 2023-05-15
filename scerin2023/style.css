@@ -53,13 +53,17 @@ background: #C0C0C0;
 
 }
 
-
+.important {
+	font-variant: small-caps;
+	color: red;
+}
 
 
 a.obsah{
 	font-weight: bold;
 	text-decoration: underline;
 	color: black;
+	font-size: 12px;
 	
 }
 
