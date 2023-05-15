@@ -1,5 +1,9 @@
 body {
 	background-color: C0C0C0; 
+	margin: auto;
+	width: 1300px;
+	background-color: whitesmoke;
+	padding: 10px;
 }
 .menu {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -10,13 +14,7 @@ background: #336699;
 
 }
 
-.whole_content{
-	background-color: white;
-	width: 1000;
-	
-	position: relative;
-  left: 10%;
-}
+
 
 .menu_grey {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -139,7 +137,7 @@ a.menu{
 }
 
 a.obsah{
-	font-size: 12;	
+	font-size: 12px;	
 	font-weight: bold;
 	text-decoration: underline;
 	color: black;
@@ -160,4 +158,8 @@ a.obsah_zeleny {
 	font-weight: normal;
 	color: #336699; 
 	font-weight: bold;
+}
+
+.table-style {
+	text-align: center;
 }
