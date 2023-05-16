@@ -35,6 +35,17 @@ background: #C0C0C0;
 
 }
 
+.nadpis_main {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: mediumblue;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 20;
+	text-align: center;
+	
+
+}
+
 	
 .content {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
