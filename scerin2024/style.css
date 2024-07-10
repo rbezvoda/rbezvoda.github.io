@@ -9,6 +9,7 @@ a {
 
 ol {
     font-size: smaller;
+    list-style-position: inside;
 }
 
 ul {
@@ -28,3 +29,29 @@ ul {
     max-height: 50px;
     margin: 5px;
 }
+
+h3 {
+    text-transform: capitalize;
+}
+
+.no-capitalize {
+    text-transform: lowercase;
+}
+
+table {
+    text-align: left;
+    border: 1px solid black;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+.table-emphasis td{
+    background-color: palegreen;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+
+  }
