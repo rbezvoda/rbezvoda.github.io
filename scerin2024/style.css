@@ -55,3 +55,7 @@ tr {
     border-bottom: 1px solid #ddd;
 
   }
+
+.no-transform {
+    text-transform: none;
+}
