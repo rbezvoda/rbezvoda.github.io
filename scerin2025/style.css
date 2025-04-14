@@ -8,12 +8,11 @@ a {
 }
 
 ol {
-    font-size: smaller;
+    
     list-style-position: inside;
 }
 
 .italic_list {
-    font-size: smaller;
     font-style: italic;
     list-style-type: none;
 }
@@ -85,3 +84,6 @@ tr {
             .lightgreen {
               background-color: #d9ead3;
             }
+.hscroll {
+    overflow-x: auto;
+}
