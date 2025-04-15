@@ -25,9 +25,15 @@ ol {
 }
 
 .logos {
-    max-height: 50px;
-    margin: 5px;
+  max-height: 50px; width: auto;
 }
+
+@media (max-width: 600px) {
+  .logos img {
+    max-height: 30px;
+  }
+}
+
 
 h3 {
     text-transform: capitalize;
